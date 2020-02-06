@@ -1,1 +1,1 @@
-alert("Hello Anil!");
+import "../styles/styles.css";
