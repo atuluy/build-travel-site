@@ -44,7 +44,7 @@ let pages = fse
   });
 
 let config = {
-  entry: "./app/assets/scripts/App.js", // The file which we want webpack to watch and process and bundle lives at this path
+  entry: "./app/assets/scripts/App.js",
   plugins: pages,
   module: {
     rules: [cssConfig]
@@ -52,7 +52,7 @@ let config = {
 };
 
 if (currentTask == "dev") {
-  cssConfig.use.unshift("style.loader");
+  cssConfig.use.unshift("style-loader");
   config.output = {
     filename: "bundled.js",
     path: path.resolve(__dirname, "app")
